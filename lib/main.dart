@@ -56,16 +56,15 @@ class SailApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       onGenerateRoute: Application.router?.generator,
       localizationsDelegates: const [
-        // 本地化的代理类
+        // Localized Proxy Classes
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: const [
-        Locale('en', 'US'), // 美式英语
-        Locale('zh', 'CN'), // 简体中文
-        //其它Locales
+        Locale('en', 'US'), //American English
+        // other Locales
       ],
       theme: appModel.themeData,
     );

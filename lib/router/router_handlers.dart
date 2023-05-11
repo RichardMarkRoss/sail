@@ -8,37 +8,37 @@ import 'package:sail/pages/server_list.dart';
 import 'package:sail/pages/webview_widget.dart';
 import 'dart:convert';
 
-/// 入口
+/// Entrance
 Handler homeHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> parameters) {
       return const HomePage();
     });
 
-/// 404页面
+/// 404 page
 Handler notFindHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> parameters) {
       return const NotFindPage();
     });
 
-/// 登录页
+///  login page
 Handler loginHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> parameters) {
       return const LoginPage();
     });
 
-/// 套餐页
+/// Package page
 Handler planHandle = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> parameters) {
       return const PlanPage();
     });
 
-/// 服务器节点页
+/// server node page
 Handler serverListHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> parameters) {
       return const ServerListPage();
     });
 
-/// WebView页
+/// WebView Page
 Handler webViewHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> parameters) {
       var title = jsonDecode(parameters["titleName"]!.first);

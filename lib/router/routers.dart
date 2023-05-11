@@ -3,7 +3,6 @@ import 'package:sail/router/router_handlers.dart';
 
 class Routers {
   static String home = "/";
-
   static String login = "/login";
   static String plan = "/plan";
   static String serverList = '/server-list';

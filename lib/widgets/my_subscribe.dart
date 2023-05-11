@@ -36,7 +36,7 @@ class MySubscribeState extends State<MySubscribe> {
         Padding(
           padding: EdgeInsets.only(left: ScreenUtil().setWidth(75)),
           child: Text(
-            "我的订阅",
+            "my subscription",
             style: TextStyle(
                 fontSize: ScreenUtil().setSp(32),
                 color: widget.isOn ? AppColors.grayColor : Colors.grey[400],
@@ -77,7 +77,7 @@ class MySubscribeState extends State<MySubscribe> {
         child: Container(
           alignment: Alignment.center,
           child: Text(
-            !widget.isLogin ? '请先登陆' : '请先订阅下方套餐',
+            !widget.isLogin ? 'Log in first, please' : 'Please subscribe to the package below',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: ScreenUtil().setWidth(40),
@@ -100,7 +100,7 @@ class MySubscribeState extends State<MySubscribe> {
         child: Container(
           alignment: Alignment.center,
           child: Text(
-            '套餐已过期，请重新订阅',
+            'Package has expired，please resubscribe',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: ScreenUtil().setWidth(40),
@@ -143,7 +143,7 @@ class MySubscribeState extends State<MySubscribe> {
                         Text(
                           widget.userSubscribeEntity?.expiredAt != null
                               ? '${DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.fromMillisecondsSinceEpoch(widget.userSubscribeEntity!.expiredAt * 1000))}过期'
-                              : '长期有效',
+                              : 'long term effective',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: ScreenUtil().setSp(35),
@@ -168,7 +168,7 @@ class MySubscribeState extends State<MySubscribe> {
                           ),
                         ),
                         Text(
-                          '已用 ${TransferUtil().toHumanReadable(widget.userSubscribeEntity!.u + widget.userSubscribeEntity!.d)} / 总计 ${TransferUtil().toHumanReadable(widget.userSubscribeEntity!.transferEnable)}',
+                          'used ${TransferUtil().toHumanReadable(widget.userSubscribeEntity!.u + widget.userSubscribeEntity!.d)} / total ${TransferUtil().toHumanReadable(widget.userSubscribeEntity!.transferEnable)}',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: ScreenUtil().setSp(26),
@@ -198,7 +198,7 @@ class MySubscribeState extends State<MySubscribe> {
                               _appModel.getTunnelLog();
                             },
                             child: Text(
-                              '续费',
+                              'Renew',
                               style: TextStyle(color: Colors.black87, fontSize: ScreenUtil().setSp(36)),
                             ),
                           ),
@@ -218,7 +218,7 @@ class MySubscribeState extends State<MySubscribe> {
                           _appModel.getTunnelConfiguration();
                         },
                         child: Text(
-                          '重置',
+                          'reset',
                           style: TextStyle(color: Colors.black87, fontSize: ScreenUtil().setSp(36)),
                         ),
                       ),

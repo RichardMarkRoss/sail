@@ -9,7 +9,7 @@ class PlanModel extends BaseModel {
 
   List<PlanEntity> get planEntityList => _planEntityList;
 
-  // 获取套餐列表
+  // Get package list
   void fetchPlanList() async {
     _planEntityList = (await _planService.plan())!;
 

@@ -43,7 +43,7 @@ class HomeWidgetState extends State<HomeWidget> with AutomaticKeepAliveClientMix
 
   @override
   void dispose() {
-    //为了避免内存泄露，需要调用_controller.dispose
+    //To avoid memory leaks，need to call_controller.dispose
     _controller.dispose();
     super.dispose();
   }

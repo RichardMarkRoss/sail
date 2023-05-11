@@ -8,7 +8,7 @@ class LoginModel extends BaseModel {
 
   LoginModel(this._userModel);
 
-  // 登陆方法
+  // login method
   login(String? account, String? passWord) async {
     var parameters = {'email': account, 'password': passWord};
 

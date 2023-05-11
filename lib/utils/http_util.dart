@@ -17,12 +17,12 @@ class HttpUtil {
     );
     dio = Dio(options);
     dio.interceptors.add(InterceptorsWrapper(onRequest: (options, handler) async {
-      print("========================请求数据===================");
+      print("========================request data===================");
       print("url=${options.uri.toString()}");
       print("headers=${options.headers}");
       print("params=${options.data}");
 
-      //如果token存在在请求参数加上token
+      //if token exists in the request parameter plustoken
       await SharedPreferencesUtil.getInstance()?.getString(AppStrings.token).then((token) {
         if (token != null) {
           options.queryParameters[AppStrings.token] = token;
@@ -30,7 +30,7 @@ class HttpUtil {
         }
       });
 
-      //如果auth_data存在在请求参数加上auth_data
+      //if auth_data exists in the request parameter plus上auth_data
       await SharedPreferencesUtil.getInstance()?.getString(AppStrings.authData).then((authData) {
         if (authData != null) {
           options.queryParameters[AppStrings.authData] = authData;
@@ -40,7 +40,7 @@ class HttpUtil {
 
       return handler.next(options);
     }, onResponse: (response, handler) {
-      print("========================请求数据===================");
+      print("========================request data===================");
       print("code=${response.statusCode}");
 
       if (response.statusCode! < 200 || response.statusCode! >= 300) {
@@ -54,7 +54,7 @@ class HttpUtil {
 
       return handler.next(response);
     }, onError: (error, handler) {
-      print("========================请求错误===================");
+      print("========================wrong request===================");
       print("message =${error.message}");
       print("code=${error.response?.statusCode}");
 
@@ -92,7 +92,7 @@ class HttpUtil {
     return response.data;
   }
 
-  //put请求
+  //put ask
   Future put(String url, {Map<String, dynamic>? parameters, Options? options}) async {
     Response response;
     if (parameters != null && options != null) {
@@ -107,7 +107,7 @@ class HttpUtil {
     return response.data;
   }
 
-  //delete请求
+  //delete ask
   Future delete(String url, {Map<String, dynamic>? parameters, Options? options}) async {
     Response response;
     if (parameters != null && options != null) {

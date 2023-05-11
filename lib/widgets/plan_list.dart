@@ -41,7 +41,7 @@ class PlanListState extends State<PlanList> with AutomaticKeepAliveClientMixin {
         Padding(
           padding: EdgeInsets.only(left: ScreenUtil().setWidth(75)),
           child: Text(
-            "订阅套餐",
+            "subscription package",
             style: TextStyle(
                 fontSize: ScreenUtil().setSp(32),
                 color: widget.isOn ? AppColors.grayColor : Colors.grey[400],
@@ -123,7 +123,7 @@ class PlanListState extends State<PlanList> with AutomaticKeepAliveClientMixin {
                                   color: const Color(0xFF1abb1d),
                                 ),
                                 Text(
-                                  "已订阅",
+                                  "subscribed",
                                   style: TextStyle(
                                       fontSize: ScreenUtil().setSp(32),
                                       color: const Color(0xFF1abb1d),
@@ -131,7 +131,7 @@ class PlanListState extends State<PlanList> with AutomaticKeepAliveClientMixin {
                                 )
                               ],
                             )
-                          : Text("选购",
+                          : Text("buy",
                               style: TextStyle(
                                   fontSize: ScreenUtil().setSp(32),
                                   fontWeight: FontWeight.w500,
