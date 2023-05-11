@@ -60,7 +60,7 @@ class PowerButtonState extends State<PowerButton> {
           child: Container(
               padding: EdgeInsets.all(ScreenUtil().setWidth(20)),
               child: Icon(
-                Icons.power_settings_new,
+                Icons.settings,
                 size: ScreenUtil().setWidth(120),
                 color: Colors.white,
               )),

@@ -95,24 +95,34 @@ class HomePageState extends State<HomePage> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(AppDimens.maxWidth, AppDimens.maxHeight));
+    ScreenUtil.init(context,
+        designSize: const Size(AppDimens.maxWidth, AppDimens.maxHeight));
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
-        value: _appModel.isOn ? SystemUiOverlayStyle.dark : SystemUiOverlayStyle.light,
+        value: _appModel.isOn
+            ? SystemUiOverlayStyle.dark
+            : SystemUiOverlayStyle.light,
         child: Scaffold(
             appBar: SailAppBar(
               appTitle: _appModel.appTitle,
             ),
             extendBody: true,
-            backgroundColor: _appModel.isOn ? AppColors.yellowColor : AppColors.grayColor,
+            backgroundColor:
+                _appModel.isOn ? AppColors.yellowColor : AppColors.grayColor,
             body: SafeArea(
                 bottom: false,
                 child: PageView(
                   physics: const NeverScrollableScrollPhysics(),
                   controller: _appModel.pageController,
-                  children: const [HomeWidget(), PlanPage(), ServerListPage(), MyProfile()],
+                  children: const [
+                    HomeWidget(),
+                    PlanPage(),
+                    ServerListPage(),
+                    MyProfile()
+                  ],
                 )),
-            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
             floatingActionButton: const PowerButton(),
             bottomNavigationBar: ClipRRect(
                 borderRadius: BorderRadius.only(
@@ -121,7 +131,9 @@ class HomePageState extends State<HomePage> with WidgetsBindingObserver {
                 child: BottomAppBar(
                   notchMargin: 8,
                   shape: const CircularNotchedRectangle(),
-                  color: _appModel.isOn ? AppColors.grayColor : AppColors.themeColor,
+                  color: _appModel.isOn
+                      ? AppColors.grayColor
+                      : AppColors.themeColor,
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -159,6 +171,9 @@ class HomePageState extends State<HomePage> with WidgetsBindingObserver {
                       )
                     ],
                   ),
-                ))));
+                )
+            )
+        )
+    );
   }
 }

@@ -10,7 +10,7 @@ class PlanPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: const <Widget>[
-        SlidingCardsView(),
+        // SlidingCardsView(),
       ],
     );
   }

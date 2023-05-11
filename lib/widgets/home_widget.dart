@@ -73,24 +73,24 @@ class HomeWidgetState extends State<HomeWidget> with AutomaticKeepAliveClientMix
                 isOn: _appModel.isOn,
               ),
             ),
+            //
+            // Padding(
+            //   padding: EdgeInsets.only(top: ScreenUtil().setWidth(30)),
+            //   child: MySubscribe(
+            //     isLogin: _userModel.isLogin,
+            //     isOn: _appModel.isOn,
+            //     userSubscribeEntity: _userSubscribeModel.userSubscribeEntity,
+            //   ),
+            // ),
 
-            Padding(
-              padding: EdgeInsets.only(top: ScreenUtil().setWidth(30)),
-              child: MySubscribe(
-                isLogin: _userModel.isLogin,
-                isOn: _appModel.isOn,
-                userSubscribeEntity: _userSubscribeModel.userSubscribeEntity,
-              ),
-            ),
-
-            Padding(
-              padding: EdgeInsets.only(top: ScreenUtil().setWidth(30)),
-              child: PlanList(
-                isOn: _appModel.isOn,
-                userSubscribeEntity: _userSubscribeModel.userSubscribeEntity,
-                plans: _planModel.planEntityList,
-              ),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.only(top: ScreenUtil().setWidth(30)),
+            //   child: PlanList(
+            //     isOn: _appModel.isOn,
+            //     userSubscribeEntity: _userSubscribeModel.userSubscribeEntity,
+            //     plans: _planModel.planEntityList,
+            //   ),
+            // ),
 
             Padding(
                 padding: EdgeInsets.symmetric(
@@ -104,7 +104,7 @@ class HomeWidgetState extends State<HomeWidget> with AutomaticKeepAliveClientMix
                 ])),
 
             _appModel.isOn ? const ConnectionStats() : const SelectLocation(),
-            const BottomBlock(),
+            // const BottomBlock(),
           ],
         ));
   }

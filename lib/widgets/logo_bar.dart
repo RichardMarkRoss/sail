@@ -24,81 +24,111 @@ class LogoBar extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.only(top: ScreenUtil().setWidth(60)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            AppStrings.appName,
-            style: TextStyle(
-              fontWeight: FontWeight.w900,
-              fontSize: ScreenUtil().setSp(60),
-              color: isOn ? AppColors.grayColor : Colors.white,
-            ),
-          ),
-          Row(
-            children: [
-              Material(
-                color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
-                borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                child: InkWell(
+      child: SizedBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              children: [
+                Material(
+                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
                   borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                  onTap: () => NavigatorUtil.goToCrisp(context),
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                        vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
-                    child: Text(
-                      "customer service",
-                      style:
-                      TextStyle(fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ),
-              ),
-              Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
-              Material(
-                color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
-                borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                  onTap: () => appModel.jumpToPage(3),
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                        vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
-                    child: Text(
-                      userSubscribeModel?.userSubscribeEntity?.email ?? "welcome",
-                      style:
-                          TextStyle(fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                ),
-              ),
-              userModel.isLogin ? Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))) : Container(),
-              userModel.isLogin
-                  ? Material(
-                      color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
-                      borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                        onTap: () {
-                          userModel.logout();
-                          NavigatorUtil.goLogin(context);
-                        },
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
-                          child: Text(
-                            'quit',
-                            style: TextStyle(
-                                fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
-                          ),
-                        ),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                    onTap: () => {},
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
+                      child: Text(
+                        "Lotto",
+                        style:
+                        TextStyle(fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
                       ),
-                    )
-                  : Container(),
-            ],
-          )
-        ],
+                    ),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
+                Material(
+                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                    onTap: () => {},
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
+                      child: Text(
+                        "Powerball",
+                        style:
+                        TextStyle(fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
+                Material(
+                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                    onTap: () => {},
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
+                      child: Text(
+                        "Daily",
+                        style:
+                        TextStyle(fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
+                Material(
+                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                    onTap: () => {},
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
+                      child: Text(
+                        "Sport Stake",
+                        style:
+                        TextStyle(fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                // userModel.isLogin ? Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))) : Container(),
+                // userModel.isLogin
+                //     ? Material(
+                //         color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                //         borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                //         child: InkWell(
+                //           borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
+                //           onTap: () {
+                //             userModel.logout();
+                //             NavigatorUtil.goLogin(context);
+                //           },
+                //           child: Container(
+                //             padding: EdgeInsets.symmetric(
+                //                 vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
+                //             child: Text(
+                //               'quit',
+                //               style: TextStyle(
+                //                   fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
+                //             ),
+                //           ),
+                //         ),
+                //       )
+                //     : Container(),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

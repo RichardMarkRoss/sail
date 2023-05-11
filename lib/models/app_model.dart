@@ -39,10 +39,10 @@ class AppModel extends BaseModel {
   }
 
   final Map _tabMap = {
-    0: AppStrings.appName,
-    1: 'combo',
-    2: 'node',
-    3: 'my point',
+    0: 'News',
+    1: 'Tickets',
+    2: 'Statistics',
+    3: 'Account',
   };
 
   void jumpToPage(int page) {

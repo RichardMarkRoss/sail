@@ -54,7 +54,7 @@ class MyProfileState extends State<MyProfile> {
                   children: <Widget>[
                     ProfileWidget(
                       avatar: _userModel.userEntity?.avatarUrl,
-                      userName: _userModel.userEntity?.email ?? "欢迎光临",
+                      userName: _userModel.userEntity?.email ?? "welcome",
                       onTap: onLogoutTap,
                     ),
                     Container(
@@ -105,7 +105,7 @@ class AccountWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Text(
-                  "账户",
+                  "account",
                   style: TextStyle(
                     color: Color(0xFFADADAD),
                     fontSize: 20,
@@ -118,12 +118,12 @@ class AccountWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(bottom: 16),
             child: InkWell(
-              onTap: () => onWebLinkTap("个人中心", '/profile'),
+              onTap: () => onWebLinkTap("personal center", '/profile'),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "🙍 个人中心",
+                    "🙍 personal center",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -136,12 +136,12 @@ class AccountWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(bottom: 16),
             child: InkWell(
-              onTap: () => onWebLinkTap("我的工单", "/ticket"),
+              onTap: () => onWebLinkTap("my ticket", "/ticket"),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "🎫 我的工单",
+                    "🎫 my ticket",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -154,12 +154,12 @@ class AccountWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(bottom: 16),
             child: InkWell(
-              onTap: () => onWebLinkTap("流量明细", "traffic"),
+              onTap: () => onWebLinkTap("Work order with flow details", "traffic"),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "🔖 流量明细",
+                    "🔖 Traffic details",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -193,7 +193,7 @@ class FinanceWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Text(
-                  "财务",
+                  "finance",
                   style: TextStyle(
                     color: Color(0xFFADADAD),
                     fontSize: 20,
@@ -206,12 +206,12 @@ class FinanceWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(bottom: 16),
             child: InkWell(
-              onTap: () => onWebLinkTap("我的订单", "/order"),
+              onTap: () => onWebLinkTap("My Order", "/order"),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "💳 我的订单",
+                    "💳 My Order",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -224,12 +224,12 @@ class FinanceWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(bottom: 16),
             child: InkWell(
-              onTap: () => onWebLinkTap("我的邀请", "/invite"),
+              onTap: () => onWebLinkTap("my invitation", "/invite"),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "🫲 我的邀请",
+                    "📥 my invitation",
                     style: TextStyle(
                       fontSize: 18,
                     ),
