@@ -55,7 +55,7 @@ class PowerButtonState extends State<PowerButton> {
         color: _appModel.isOn ? AppColors.themeColor : Colors.grey,
         child: InkWell(
           splashColor: AppColors.yellowColor,
-          onTap: () => _userModel.checkHasLogin(context, pressConnectBtn),
+          onTap: () => {}, //function for main button
           borderRadius: BorderRadius.circular(ScreenUtil().setWidth(140)),
           child: Container(
               padding: EdgeInsets.all(ScreenUtil().setWidth(20)),

@@ -32,7 +32,7 @@ class LogoBar extends StatelessWidget {
             Row(
               children: [
                 Material(
-                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  color: isOn ? const Color(0x66000000) : AppColors.yellowColor,
                   borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
@@ -50,7 +50,7 @@ class LogoBar extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
                 Material(
-                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  color: isOn ? const Color(0x66000000) : AppColors.blueColor,
                   borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
@@ -68,7 +68,7 @@ class LogoBar extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
                 Material(
-                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  color: isOn ? const Color(0x66000000) : AppColors.redColor,
                   borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
@@ -86,7 +86,7 @@ class LogoBar extends StatelessWidget {
                 ),
                 Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))),
                 Material(
-                  color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
+                  color: isOn ? const Color(0x66000000) : AppColors.greenColor,
                   borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
                   child: InkWell(
                     borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
@@ -102,29 +102,6 @@ class LogoBar extends StatelessWidget {
                     ),
                   ),
                 ),
-                // userModel.isLogin ? Padding(padding: EdgeInsets.only(left: ScreenUtil().setWidth(15))) : Container(),
-                // userModel.isLogin
-                //     ? Material(
-                //         color: isOn ? const Color(0x66000000) : AppColors.darkSurfaceColor,
-                //         borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                //         child: InkWell(
-                //           borderRadius: BorderRadius.circular(ScreenUtil().setWidth(30)),
-                //           onTap: () {
-                //             userModel.logout();
-                //             NavigatorUtil.goLogin(context);
-                //           },
-                //           child: Container(
-                //             padding: EdgeInsets.symmetric(
-                //                 vertical: ScreenUtil().setWidth(10), horizontal: ScreenUtil().setWidth(30)),
-                //             child: Text(
-                //               'quit',
-                //               style: TextStyle(
-                //                   fontSize: ScreenUtil().setSp(36), color: Colors.white, fontWeight: FontWeight.w500),
-                //             ),
-                //           ),
-                //         ),
-                //       )
-                //     : Container(),
               ],
             )
           ],

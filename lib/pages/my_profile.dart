@@ -53,8 +53,8 @@ class MyProfileState extends State<MyProfile> {
                 child: Column(
                   children: <Widget>[
                     ProfileWidget(
-                      avatar: _userModel.userEntity?.avatarUrl,
-                      userName: _userModel.userEntity?.email ?? "welcome",
+                      avatar: _userModel.userEntity?.avatarUrl ?? "https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?w=826&t=st=1683799585~exp=1683800185~hmac=0afd4b35a90c0a09259f73a065f7d1930aed2b0853bd1390267d17323df1babe",
+                      userName: _userModel.userEntity?.email ?? "login",
                       onTap: onLogoutTap,
                     ),
                     Container(
@@ -123,7 +123,7 @@ class AccountWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "🙍 personal center",
+                    "⚙️ Account Settings",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -141,25 +141,7 @@ class AccountWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "🎫 my ticket",
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
-                  ),
-                  Icon(Icons.arrow_forward_ios, size: 16),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.only(bottom: 16),
-            child: InkWell(
-              onTap: () => onWebLinkTap("Work order with flow details", "traffic"),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    "🔖 Traffic details",
+                    "📲 Contact us",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -211,7 +193,7 @@ class FinanceWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "💳 My Order",
+                    "💳 Card details",
                     style: TextStyle(
                       fontSize: 18,
                     ),
@@ -229,7 +211,7 @@ class FinanceWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    "📥 my invitation",
+                    "📥 Inbox",
                     style: TextStyle(
                       fontSize: 18,
                     ),
